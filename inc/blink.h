@@ -1,8 +1,8 @@
-#ifndef __BLINKY_H_
-#define __BLINKY_H_
+#ifndef __BLINK_H_
+#define __BLINK_H_
 /**
- * @file blinky.h
- * @author Bharath.G ()
+ * @file blink.h
+ * @author Rakshita.R.K ()
  * @brief Project to Blink an LED connected to AVR328 MCU GPIO Pin
  * @version 0.1
  * @date 2021-04-21
@@ -24,6 +24,7 @@
  * Include files
  */ 
 #include <avr/io.h>
+#include<util/delay.h>
 
 /**
  * Function Definitions
@@ -37,4 +38,4 @@
 void change_led_state(uint8_t state);
 
 
-#endif /** __BLINKY_H_ */
+#endif /** __BLINK_H_ */
