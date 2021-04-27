@@ -2,7 +2,7 @@
 #define __PROJECT_CONFIG_H__
 /**
  * @file project_config.h
- * @author Bharath.G ()
+ * @author Bharath.R.K ()
  * @brief Configuration file to define pins and ports for the interfaced peripherals
  * @version 0.1
  * @date 2021-04-23
