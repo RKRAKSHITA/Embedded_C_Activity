@@ -1,24 +1,18 @@
-#ifndef __PWM_ACTIVITY_H__
-#define __PWM_ACTIVITY_H__
-
 /**
- * @brief Initializes registers for UART communication
- * 
+ *@file uart.h
+ *@author Rakshita.R.K()
+ *@brief Header files to declare USART related functions
+ *@version 0.1
+ *@date 2021-04-29
+ *
+ *@copyright Copyright (c) 2021
+ *
  */
-void USARTInit(void);
+#ifndef USART_H_INCLUDED
+#define USART_H_INCLUDED
 
-/**
- * @brief Function to read character from the serial input buffer
- * 
- * @return char 8 bit character read from the serial communication
- */
-char USARTReadChar(void);
+void USARTInit(uint16_t);
+void USARTWriteData(uint8_t);
 
-/**
- * @brief Function to write character to the serial output buffer
- * 
- * @param data 8 bit data to be written to the serial output buffer
- */
-void USARTWriteChar(char data);
 
-#endif
+#endif // USART_H_INCLUDED
