@@ -14,4 +14,4 @@
 void InitADC(void);
 uint16_t ReadADC(uint8_t);
 
-#endif // READADC_H_INCLUDED
+#endif // ADC_H_INCLUDED
