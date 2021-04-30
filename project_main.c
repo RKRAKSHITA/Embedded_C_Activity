@@ -1,6 +1,6 @@
 /**
  *@file main.c
- *@author Vichkshana (jsvichkshana@gmail.com)
+ *@author Rakshita.R.K
  *@brief Main application for seat heater project
  *@version 0.1
  *@date 2021-04-29
