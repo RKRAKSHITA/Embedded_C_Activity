@@ -1,12 +1,12 @@
-# Embedded C Programming Examples with Continuous Integration and Code Quality
+# Embedded C Programming with Continuous Integration and Code Quality
 
 # LED Blinking 
 
-## In Action
+# ADC 
 
-|ON|OFF|
-|:--:|:--:|
-|![ON](simulation/ON.png)|![OFF](simulation/OFF.png)|
+# PWM
+
+# USART
 
 #### CI and Code Quality
 
