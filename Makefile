@@ -1,4 +1,4 @@
-PROJ_NAME = Blink
+PROJ_NAME = Seat Heating Application
 
 BUILD_DIR = Build
 
