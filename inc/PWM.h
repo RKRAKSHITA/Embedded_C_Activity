@@ -1,5 +1,5 @@
 /**
- *@file pot_pwm.h
+ *@file pwm.h
  *@author Rakshita.R.k()
  *@brief Header files for PWM
  *@version 0.1
