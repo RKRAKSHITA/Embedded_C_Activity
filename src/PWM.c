@@ -1,5 +1,5 @@
 /**
- *@file pot_pwm.c
+ *@file pwm.c
  *@author Rakshita.R.K()
  *@brief 
  *@version 0.1
