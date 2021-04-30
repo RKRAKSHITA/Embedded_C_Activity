@@ -1,5 +1,5 @@
 /**
- *@file ReadADC.h
+ *@file ADC.h
  *@author Rakshita.R.K()
  *@brief Header files for ADC functions
  *@version 0.1
