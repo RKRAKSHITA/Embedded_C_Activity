@@ -1,42 +1,56 @@
-#define F_CPU 16000000UL
+/**
+ *@file pot_pwm.c
+ *@author Rakshita.R.K()
+ *@brief 
+ *@version 0.1
+ *@date 2021-04-29
+ *
+ *@copyright Copyright (c) 2021
+ *
+ */
 #include <avr/io.h>
+#include "ADC.h"
 #include <util/delay.h>
+#include "USART.h"
 
-uint8_t PWM_output(uint16_t ADC_value)
+/**
+ *@brief Initialse timer 1 with 64 prescalar
+ *
+ */
+void InitPwm(void)
 {
-    DDRB |= (1 << PB1);  ///<Set PB1 bit in DDRB to make it as output pin
+    TCCR1A |= (1<<COM1A1)|(1<<WGM10)|(1<<WGM11);
+    TCCR1B |= (1<<WGM12)|(1<CS11)|(1<<CS10); //64 prescalar
+    DDRB |= (1<<PB1);
+}
 
-    ///Non inverting mode - Fast PWM with 10 bits for resolution of 1024
-    TCCR1A |= (1 << COM1A1) | (1 << WGM11) | (1 << WGM10);
-    TCCR1B |= (1 << CS11) | (1 << CS10);
-    uint8_t temp = 0;
+/**
+ *@brief Generate PWM signal based on desired duty cycle and write the corresponding temp in serial monitor
+ *
+ *@param temp 
+ */
 
-    if(ADC_value >= 0 && ADC_value <= 200)
+void out_pwm(uint16_t temp)
+{
+    if(temp>=0 && temp<=200)
     {
-        OCR1A = 204;   ///<20% dutycycle
-        temp = 20;
-        _delay_ms(200);
+        OCR1A=205;          //20% duty cycle
+        USARTWriteData(20);
     }
-    else if(ADC_value >= 210 && ADC_value <= 500)
+    if(temp>=201 && temp<=500)
     {
-        OCR1A = 410;   ///<40% dutycycle
-        temp = 25;
-        _delay_ms(200);
+        OCR1A=410;          //40% duty cycle
+        USARTWriteData(25);
     }
-    else if(ADC_value >= 510 && ADC_value <= 700)
+    if(temp>=501 && temp<=700)
     {
-        OCR1A = 717;   ///<70% dutycycle
-        temp = 29;
-        _delay_ms(200);
+        OCR1A=717;          //70% duty cycle
+        USARTWriteData(29);
     }
-    else if(ADC_value >= 710 && ADC_value <= 1024)
+    if(temp>=701 && temp<=1024)
     {
-        OCR1A = 973;   ///<95% dutycycle
-        temp = 33;
-        _delay_ms(200);
+        OCR1A=973;          //95% duty cycle
+        USARTWriteData(33);
     }
-    else
-        OCR1A = 0;   ///<0% dutycycle
 
-    return temp;
 }
