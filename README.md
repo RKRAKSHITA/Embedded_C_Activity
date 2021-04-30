@@ -1,6 +1,6 @@
-# Embedded C Programming with Continuous Integration and Code Quality
+# SEAT HEATER APPLICATION
 
-# LED Blinking 
+# LED ON 
 
 # ADC 
 
