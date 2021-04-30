@@ -1,13 +1,17 @@
-#ifndef __PWM_ACTIVITY_H__
-#define __PWM_ACTIVITY_H__
-
 /**
- * @brief Function to generate PWM output 
- * 
- * @param ADC_value Output digital value from ADC
- * @return uint8_t Returns the temperature value in decimal corresponding to the PWM output
+ *@file pot_pwm.h
+ *@author Rakshita.R.k
+ *@brief Header files for PWM
+ *@version 0.1
+ *@date 2021-04-29
+ *
+ *@copyright Copyright (c) 2021
+ *
  */
-uint8_t PWM_output(uint16_t ADC_value);
+#ifndef PWM_H_INCLUDED
+#define PWM_H_INCLUDED
 
-#endif
-© 2021 GitHub, Inc.
+void InitPwm(void);
+void out_pwm(uint16_t);
+
+#endif // POT_PWM_H_INCLUDED
