@@ -1,18 +1,17 @@
-#ifndef __ADC_ACTIVITY_H__
-#define __ADC_ACTIVITY_H__
-
 /**
- * @brief Initialize registers for ADC
- * 
+ *@file ReadADC.h
+ *@author Rakshita.R.K()
+ *@brief Header files for ADC functions
+ *@version 0.1
+ *@date 2021-04-29
+ *
+ *@copyright Copyright (c) 2021
+ *
  */
+#ifndef ADC_H_INCLUDED
+#define ADC_H_INCLUDED
+
 void InitADC(void);
+uint16_t ReadADC(uint8_t);
 
-/**
- * @brief Reads analog value from the input channel and converts into digital value
- * 
- * @param ch Analog channel number
- * @return uint16_t ADC output value
- */
-uint16_t Read_ADC(uint8_t ch);
-
-#endif
+#endif // READADC_H_INCLUDED
